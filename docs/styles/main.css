@@ -570,6 +570,11 @@ pre code {
     overflow-y: scroll;
 }
 
+.container2 { 
+
+
+}
+
 .container {
     width: 100%;
     padding-right: 15px;
@@ -10034,6 +10039,10 @@ body {
     padding: 100px 0;
 }
 
+.ww-section2 {
+    padding : 20px 0 ;
+}
+
 .btn-primary {
     color: #fff;
 }
@@ -10059,3 +10068,37 @@ body {
     left: 0;
     margin: 0px 15px 15px 15px;
 }
+
+.button-wedding {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background-color: #6c757d;
+    border: 2px solid #6c757d;
+    border-radius: 30px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.button-wedding:hover {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+
+.zoomed  {
+
+    /* width: 90vw; */
+    /* position: absolute; */
+    /* height: 90vh; */
+
+
+
+
+    max-width: none;
+    cursor: zoom-out;
+}
+
