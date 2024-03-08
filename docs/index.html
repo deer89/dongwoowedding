@@ -58,32 +58,6 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
                 });
             return result;
         }
-
-        // $(document).ready(function () {
-
-        //     function getText(){
-        //         var result = null;
-        //         $.ajax( { url: "https://raw.githubusercontent.com//wedding-card/master/README.md",
-        //                 type: 'get',
-        //                 dataType: 'html',
-        //                 async: false,
-        //                 success: function(data) { result = data; }
-        //             }
-        //         );
-        //         FileReady = true;
-        //         return result;
-        //     }
-        //     var markdown_source = getText();
-        //     var comment_contents = markdown_source.split("축하의 말")[1];
-
-        //     var md = new Remarkable();
-        //     $("#comments").append(md.render(comment_contents));
-
-            
-        //     if(findGetParameter('gift')=='false'){
-        //         $('#gifts').hide();
-        //     }
-        // });
     </script>
 </head>
 
@@ -93,18 +67,19 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
 <div style="width: 100%;">
     <div class="div">
-        <div class="ww-home-page" id="home">
-            <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
-                <div class="container ww-announcement-container">
-                    <p class="ww-couple-name ww-title" style="font-size:4.0em">Dongwoo & Seonah</p>
-                    <p class="h2 mt-5 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em">
+        <div class="ww-home-page" id="home" style="display: flex; justify-content: center;">
+            <!-- <div class="ww-wedding-announcement d-flex align-items-center justify-content-start" style="background-color:red;"> -->
+            <div class="ww-wedding-announcement d-flex align-items-center justify-content-center" style=" display: flex; align-items: center; justify-content: center;">
+                <div class="container ww-announcement-container" >
+                    <p class="ww-couple-name ww-title" style="font-size:2.0em">Dongwoo & Seonah</p>
+                    <!-- <p class="h2 mt-5 ww-title" style="font-family: 'Gugi', cursive; font-size:1.0em">
                         | WE ARE GETTING MARRIED |
-                    </p>
-                    <p class="h2 mt-5 ww-title"
+                    </p> -->
+                    <!-- <p class="h2 mt-5 ww-title"
                        style="font-family: 'Noto Serif KR', serif; font-size:1.0em; letter-spacing:-1px">
                         <b style="font-size:1.4em;">2024. 05. 25. SAT PM 03:20</b>
                         <br>더링크 호텔 서울 3층 베일리홀
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -209,7 +184,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
                         <div class="card-columns">
                             <div class="card" data-groups="[&quot;party&quot;,&quot;wedding&quot;]">
                                 <a data-gallery="ww-gallery" data-toggle="lightbox">
-                                    <img  alt="Gallery Pic 2" class="img-fluid gallery" src="images/IMG_6365.JPG"/>
+                                    <img  alt="Gallery Pic 2" class="img-fluid gallery" src="images/IMG_6365.JPG" width="300px" height="300px"/>
                                 </a>
                             </div>
                             <div class="card" data-groups="[&quot;vacation&quot;]">
