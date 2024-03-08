@@ -569,7 +569,7 @@
     </div>
 
     <!-- Modal -->
-    <div id="myModal" class="modal" style="">
+    <div id="myModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01" />
 
@@ -578,16 +578,18 @@
       <img
         style="position: fixed; left: 20px; top: 50%; cursor: pointer"
         src="./images/left-arrow.png"
-        alt=""
-        width="30px"
-        height="30px"
+        width="40px"
+        height="40px"
+        style="cursor: pointer"
+        id="arrow-left"
       />
       <img
         style="position: fixed; right: 20px; top: 50%; cursor: pointer"
         src="./images/right-arrow.png"
-        alt=""
-        width="30px"
-        height="30px"
+        width="40px"
+        height="40px"
+        style="cursor: pointer"
+        id="arrow-right"
       />
     </div>
 
@@ -600,6 +602,16 @@
     <script src="js/ekko-lightbox.min.js"></script>
     <script src="scripts/main.js"></script>
     <script>
+      let currentImageIndex = 0
+      const arrowRight = document.getElementById("arrow-right")
+      const arrowLeft = document.getElementById("arrow-left")
+
+      // const handleRightArrowClick = (e) => {
+      //   e.stopPropagation()
+      // }
+      // const handleLeftArrowClick = (e) => {
+      //   e.stopPropagation()
+      // }
       const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
           alert(`계좌번호 ${text}가 복사되었습니다`)
@@ -626,6 +638,32 @@
         captionText.innerHTML = this.alt
       }
 
+      arrowLeft.addEventListener("click", (e) => {
+        e.stopPropagation()
+
+        if (currentImageIndex === 0) {
+          currentImageIndex = 8
+        } else {
+          currentImageIndex -= 1
+        }
+        changeModalImage()
+      })
+      arrowRight.addEventListener("click", (e) => {
+        e.stopPropagation()
+
+        if (currentImageIndex === 8) {
+          currentImageIndex = 0
+        } else {
+          currentImageIndex += 1
+        }
+        changeModalImage()
+      })
+
+      function changeModalImage() {
+        modalImg.src = galleries[currentImageIndex].src
+        captionText.innerHTML = `${currentImageIndex + 1}  /  9`
+      }
+
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0]
 
@@ -638,7 +676,8 @@
         gallery.onclick = function () {
           modal.style.display = "block"
           modalImg.src = this.src
-          captionText.innerHTML = this.alt
+          // captionText.innerHTML = this.alt
+          captionText.innerHTML = "1  /  9"
         }
       })
 
