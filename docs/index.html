@@ -159,7 +159,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: white;
-                z-index: 99999999999;
+                z-index: 99;
                 width: 300px;
                 text-align: center;
               "
@@ -374,7 +374,7 @@
                 class="h2 text-center pb-3 ww-title"
                 style="
                   font-family: 'MaruBuri-SemiBold', 'Noto Serif KR', serif;
-                  font-size: 1.8em;
+                  font-size: 1.7em;
                 "
               >
                 신랑 & 신부에게 마음 전하기
@@ -569,10 +569,26 @@
     </div>
 
     <!-- Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01" />
+
       <div id="caption"></div>
+
+      <img
+        style="position: fixed; left: 20px; top: 50%; cursor: pointer"
+        src="./images/left-arrow.png"
+        alt=""
+        width="30px"
+        height="30px"
+      />
+      <img
+        style="position: fixed; right: 20px; top: 50%; cursor: pointer"
+        src="./images/right-arrow.png"
+        alt=""
+        width="30px"
+        height="30px"
+      />
     </div>
 
     <footer></footer>
@@ -593,6 +609,7 @@
       const galleries = document.getElementsByClassName("gallery")
 
       var modal = document.getElementById("myModal")
+      modal.style.zIndex = 10000000000000
 
       modal.onclick = function () {
         modal.style.display = "none"
@@ -604,6 +621,7 @@
       var captionText = document.getElementById("caption")
       img.onclick = function () {
         modal.style.display = "block"
+        modal.style.zIndex = 1000000000000000
         modalImg.src = this.src
         captionText.innerHTML = this.alt
       }
