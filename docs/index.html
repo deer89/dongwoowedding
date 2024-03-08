@@ -606,12 +606,6 @@
       const arrowRight = document.getElementById("arrow-right")
       const arrowLeft = document.getElementById("arrow-left")
 
-      // const handleRightArrowClick = (e) => {
-      //   e.stopPropagation()
-      // }
-      // const handleLeftArrowClick = (e) => {
-      //   e.stopPropagation()
-      // }
       const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
           alert(`계좌번호 ${text}가 복사되었습니다`)
@@ -708,7 +702,7 @@
     </script>
 
     <div class="bottom_right" style="opacity: 30%">
-      <i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
+      <i class="fa fa-arrow-up fa-2x" id="go-to-top" style="z-index: 10"></i>
     </div>
 
     <div class="bottom_left">
