@@ -10142,16 +10142,35 @@ body {
 }
 
 /* Home Page Style */
-.ww-home-page {
+/* .ww-home-page {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("../images/main_back.JPG") no-repeat center center;
-  background-size: cover;
-  background-position: 50%;
-  height: 100vh;
-  min-height: 480px;
-  width: 90%;
+    url("../images/main_back.JPG");
+
+  background-repeat: no-repeat;
+  background-position: center top 20px;
+
   background-color: red;
+  /* no-repeat center center; */
+  background-size: cover;
+  /* background-size: 100% 100%; */
+  /* background-position: 50%; */
+  height: calc(100vh - 500px);
+  object-fit: cover;
+  min-height: 480px;
+  width: 100%;
+} 
+
+*/
+
+.hyunjin {
+    /* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+ url("../images/main_back.JPG"); */
+    /* height: calc(100vh - 500px); */
+    height: 100vh;
+    min-height: 480px;
+    width: 100%;
 }
+
 
 .ww-home-page .ww-wedding-announcement {
   width: 100%;
