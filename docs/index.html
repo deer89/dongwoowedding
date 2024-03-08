@@ -289,41 +289,55 @@
               <div style="display: grid; grid-template-columns: 33% 33% 33%">
                 <div>
                   <img
-                    alt="Gallery Pic 2"
+                    id="gallery-img-1"
+                    alt="Gallery Pic 1"
                     class="img-fluid gallery"
                     src="images/IMG_6365.JPG"
                   />
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 3"
+                    id="gallery-img-2"
+                    alt="Gallery Pic 2"
                     class="img-fluid gallery"
                     src="images/IMG_6367.JPG"
                   />
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 4"
+                    id="gallery-img-3"
+                    alt="Gallery Pic 3"
                     class="img-fluid gallery"
                     src="images/IMG_6368.JPG"
                   />
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 5"
+                    id="gallery-img-4"
+                    alt="Gallery Pic 4"
                     class="img-fluid gallery"
                     src="images/IMG_6369.JPG"
                   />
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 6"
+                    id="gallery-img-5"
+                    alt="Gallery Pic 5"
                     class="img-fluid gallery"
                     src="images/IMG_6370.JPG"
                   />
                 </div>
                 <div>
                   <img
+                    id="gallery-img-6"
+                    alt="Gallery Pic 6"
+                    class="img-fluid gallery"
+                    src="images/KakaoTalk_Photo_2024-03-05-01-42-37.jpeg"
+                  />
+                </div>
+                <div>
+                  <img
+                    id="gallery-img-7"
                     alt="Gallery Pic 7"
                     class="img-fluid gallery"
                     src="images/KakaoTalk_Photo_2024-03-05-01-42-37.jpeg"
@@ -331,21 +345,16 @@
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 7"
+                    id="gallery-img-8"
+                    alt="Gallery Pic 8"
                     class="img-fluid gallery"
                     src="images/KakaoTalk_Photo_2024-03-05-01-42-37.jpeg"
                   />
                 </div>
                 <div>
                   <img
-                    alt="Gallery Pic 7"
-                    class="img-fluid gallery"
-                    src="images/KakaoTalk_Photo_2024-03-05-01-42-37.jpeg"
-                  />
-                </div>
-                <div>
-                  <img
-                    alt="Gallery Pic 7"
+                    id="gallery-img-9"
+                    alt="Gallery Pic 9"
                     class="img-fluid gallery"
                     src="images/KakaoTalk_Photo_2024-03-05-01-42-37.jpeg"
                   />
@@ -435,7 +444,6 @@
           </div>
         </div>
 
-        <!--  -->
         <div class="ww-section ww-rsvp-detail" style="overflow: hidden">
           <div class="container">
             <div class="col text-center">
@@ -553,14 +561,39 @@
 
       const galleries = document.getElementsByClassName("gallery")
 
+      var modal = document.getElementById("myModal")
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("gallery-img-1")
+      var modalImg = document.getElementById("img01")
+      var captionText = document.getElementById("caption")
+      img.onclick = function () {
+        modal.style.display = "block"
+        modalImg.src = this.src
+        captionText.innerHTML = this.alt
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0]
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none"
+      }
+
       Array.from(galleries).forEach((gallery) => {
-        gallery.addEventListener("click", () => {
-          if (gallery.classList.contains("zoomed")) {
-            gallery.classList.remove("zoomed")
-          } else {
-            gallery.classList.add("zoomed")
-          }
-        })
+        gallery.onclick = function () {
+          modal.style.display = "block"
+          modalImg.src = this.src
+          captionText.innerHTML = this.alt
+        }
+        // gallery.addEventListener("click", () => {
+        //   if (gallery.classList.contains("zoomed")) {
+        //     gallery.classList.remove("zoomed")
+        //   } else {
+        //     gallery.classList.add("zoomed")
+        //   }
+        // })
       })
 
       var mapContainer = document.getElementById("map"), // 지도를 표시할 div
