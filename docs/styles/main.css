@@ -10439,6 +10439,41 @@ body {
   font-family: "Great Vibes", cursive;
 }
 
+@font-face {
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-SemiBold.otf");
+      font-family: "MaruBuri-SemiBold"
+
+}
+@font-face {
+      src : url("../font/maruburi/MaruBuri-SemiBold.ttf");
+      font-family: "MaruBuri-SemiBold2"
+
+}
+@font-face {
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-Bold.otf");
+      font-family: "MaruBuri-Bold"
+
+}
+
+@font-face {
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-Regular.otf");
+      font-family: "MaruBuri-Regular"
+
+}
+
+@font-face {
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-ExtraLight.ttf");
+      font-family: "MaruBuri-ExtraLight"
+
+}
+
+@font-face {
+      src : url("../font/Mea_Culpa/MeaCulpa-Regular.ttf");
+      font-family: "MeaCulpa-Regular"
+
+}
+
+
 .ww-section {
   padding: 100px 0;
 }
