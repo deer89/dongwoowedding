@@ -265,9 +265,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
              </div>
          </div>  -->
         <!-- 계좌번호 섹션 -->
-        <div class="ww-section ww-rsvp-detail" 
-
-        >
+        <div class="ww-section ww-rsvp-detail">
             <div class="container">
                 <div class="col text-center">
                     <h2 class="h2 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">신랑 & 신부에게 마음 전하기</h2>
@@ -317,15 +315,8 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
                                 </span>
                             </div>
                         </div>
-                        
-
-
                     </div>
                 </div>
-
- 
-
-
             </div>
         </div>
 
@@ -364,7 +355,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
                         <div class="my-3 text-center" >
                     
                             <div>
-                                <div id="map" style="width:100%;height:350px;"></div>
+                                <div id="map" style="width:100%;height:250px;"></div>
                             </div>
                             
                         </div>
@@ -467,6 +458,10 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
          // draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
         level: 3 // 지도의 확대 레벨
     };
+
+
+    mapContainer.style.width = '100%';
+    mapContainer.style.height = '350px';
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
