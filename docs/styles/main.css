@@ -10615,3 +10615,7 @@ body {
     width: 100%;
   }
 }
+
+img {
+  user-select: none;
+}
