@@ -27,6 +27,8 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6155996ef38a29e93fad7c9ad31df4e9"></script>
+
     <script type="text/javascript">
         function sendMail() {
 
@@ -57,31 +59,31 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
             return result;
         }
 
-        $(document).ready(function () {
+        // $(document).ready(function () {
 
-            function getText(){
-                var result = null;
-                $.ajax( { url: "https://raw.githubusercontent.com//wedding-card/master/README.md",
-                        type: 'get',
-                        dataType: 'html',
-                        async: false,
-                        success: function(data) { result = data; }
-                    }
-                );
-                FileReady = true;
-                return result;
-            }
-            var markdown_source = getText();
-            var comment_contents = markdown_source.split("축하의 말")[1];
+        //     function getText(){
+        //         var result = null;
+        //         $.ajax( { url: "https://raw.githubusercontent.com//wedding-card/master/README.md",
+        //                 type: 'get',
+        //                 dataType: 'html',
+        //                 async: false,
+        //                 success: function(data) { result = data; }
+        //             }
+        //         );
+        //         FileReady = true;
+        //         return result;
+        //     }
+        //     var markdown_source = getText();
+        //     var comment_contents = markdown_source.split("축하의 말")[1];
 
-            var md = new Remarkable();
-            $("#comments").append(md.render(comment_contents));
+        //     var md = new Remarkable();
+        //     $("#comments").append(md.render(comment_contents));
 
             
-            if(findGetParameter('gift')=='false'){
-                $('#gifts').hide();
-            }
-        });
+        //     if(findGetParameter('gift')=='false'){
+        //         $('#gifts').hide();
+        //     }
+        // });
     </script>
 </head>
 
@@ -326,7 +328,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
         </div>
 
         <!--  -->
-        <div class="ww-section ww-rsvp-detail" id="map">
+        <div class="ww-section ww-rsvp-detail" id="map" style="overflow: hidden;">
             <div class="container">
                 <div class="col text-center">
                     <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">오시는 길</h2>
@@ -357,9 +359,13 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
                                 셔틀버스 -
                             </label>
                         </div>
-                        <div class="my-3 text-center">
-                            <a href="https://map.kakao.com/?urlX=474362&urlY=1112778&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=474362&MY=1112778&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc"></a>
-                            </div>
+                        <div class="my-3 text-center" >
+                            <!-- <a href="https://map.kakao.com/?urlX=474362&urlY=1112778&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+                                <img width="100%" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=474362&MY=1112778&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+                            </a> -->
+
+                            <div id="map" style="width:100%;height:350px;"></div>
+                          
 
                             <!-- <iframe src="https://kko.to/A1MB7r9GZ4" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                         </div>
@@ -369,6 +375,9 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
             </div>
         </div>
+
+
+        
 
         <div class="ww-section2 bg-light" id="comment">
             <div class="ww-photo-gallery">
@@ -450,8 +459,23 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale
 
         })
     })
-    console.log(galleries, "?")
-    
+
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+         // draggable: false, // 지도를 생성할때 지도 이동 및 확대/축소를 막으려면 draggable: false 옵션을 추가하세요
+        level: 3 // 지도의 확대 레벨
+    };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다
+    function setDraggable(draggable) {
+        // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+        map.setDraggable(draggable);    
+    }
+        
 
 </script>
 
