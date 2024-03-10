@@ -10621,17 +10621,46 @@ img {
 }
 
 .fade-up {
-    opacity: 0;
+    /* opacity: 0;
     transform: translateY(50px);
     transition-property: transform,opacity;
     transition-duration: .5s;
-    transition-timing-function: linear
+    transition-timing-function: linear */
+    transform: translateY(30px);
+    opacity: 0;
+    animation: 800ms ease fadeUp;
+    animation-fill-mode: forwards;
 }
-
 
 .in-view {
     transform: none;
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0s
+}
+
+.hyunjin-frame {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: 1800ms ease fadeUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.notion-frame > .notion-scroller {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: 4000ms ease fadeUp;
+  animation-fill-mode: forwards;
 }
