@@ -10619,3 +10619,19 @@ body {
 img {
   user-select: none;
 }
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition-property: transform,opacity;
+    transition-duration: .5s;
+    transition-timing-function: linear
+}
+
+
+.in-view {
+    transform: none;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s
+}
