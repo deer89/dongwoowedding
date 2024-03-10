@@ -10651,7 +10651,6 @@ img {
   animation: 2500ms ease fadeUp;
   animation-fill-mode: forwards;
 }
-
 @keyframes fadeUp {
   from {
     transform: translateY(80px);
