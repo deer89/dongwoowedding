@@ -1024,28 +1024,20 @@
       // Start observing the animated element
       observer.observe(animatedElement)
 
-      const oberserv3 = new IntersectionObserver(handleIntersection, options)
+      const observer3 = new IntersectionObserver(handleIntersection, options)
 
       const animatedElement3 = document.querySelector(".hyunjin-frame-3")
-      oberserv3.observe(animatedElement3)
+      observer3.observe(animatedElement3)
 
-      const oberserv4 = new IntersectionObserver(handleIntersection, options)
+      const observer4 = new IntersectionObserver(handleIntersection, options)
 
       const animatedElement4 = document.querySelector(".hyunjin-frame-4")
-      oberserv4.observe(animatedElement4)
+      observer4.observe(animatedElement4)
 
 
-      const oberserv5 = new IntersectionObserver(handleIntersection, options)
+      const observer5 = new IntersectionObserver(handleIntersection, options)
       const animatedElement5 = document.querySelector(".hyunjin-frame-5")
-      oberserv5.observe(animatedElement5)
-
-      const oberserv6 = new IntersectionObserver(handleIntersection, options)
-      const animatedElement6 = document.querySelector(".hyunjin-frame-6")
-      oberserv6.observe(animatedElement6)
-
-      let currentImageIndex = 0
-      const arrowRight = document.getElementById("arrow-right")
-      const arrowLeft = document.getElementById("arrow-left")
+      observer5.observe(animatedElement5)
 
       const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
