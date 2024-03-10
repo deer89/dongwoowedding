@@ -9,6 +9,178 @@
     <meta property="og:image" content="images/pic2.jpeg" />
     <meta property="fb:app_id" content="781066922265598" />
     <meta property="fb:admins" content="Choi.Anderson" />
+    <style id="__jsx-2261571922">
+            .calendar.jsx-2261571922 {
+                max-width: 214px;
+                padding-top: 12px;
+                margin: 0 auto;
+            }
+
+            .calendar__month.jsx-2261571922 {
+                font-family: 'MaruBuri-Bold' ,Pretendard;
+                font-size: 1.625em;
+                text-align: center;
+                line-height: 230%;
+             --   color: #0C6A31;
+            }
+
+            .calendar__day.jsx-2261571922 {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .calendar__date.jsx-2261571922 {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .calendar__item.jsx-2261571922 {
+                margin-bottom: 10px;
+                padding-left: 1px;
+                width: 22px;
+                height: 22px;
+                line-height: 23px;
+                text-align: center;
+                font-family: 'MaruBuri-SemiBold' ,Pretendard;
+            }
+
+            .calendar__item.jsx-2261571922:not(:nth-child(7n)) {
+                margin-right: 10px;
+            }
+
+            .calendar__item.jsx-2261571922:nth-child(7n+1) {
+                color: red;
+            }
+
+            .calendar__date.jsx-2261571922 .calendar__item.jsx-2261571922:nth-last-child(-n+7) {
+                margin-bottom: 0px;
+            }
+
+            .calendar.jsx-2261571922 .event-date.jsx-2261571922 {
+                color: #fefefe;
+                border-radius: 50%;
+                background-color: #4d6bd4;
+            }
+        </style>
+    <style id="__jsx-457357336">
+              .container.jsx-2505244336 {
+                height: 100%;
+                background-color: #f9f9f9;
+            }
+
+            .type1.jsx-2505244336 {
+                width: 100%;
+                padding: 40px 16px;
+                color: #0C6A31;
+                text-align: center;
+            }
+
+            .name.jsx-2505244336 {
+                padding-bottom: 117px;
+            }
+
+            .name__item.jsx-2505244336 {
+                font-family: GmarketSansMedium;
+            }
+
+            .name__deco.jsx-2505244336 {
+                padding: 0.1em 0.625em 0 0.625em;
+            }
+
+            .photo__box.jsx-2505244336 {
+                width: 100%;
+                margin: 0 1em;
+                background-color: #f1f1f1;
+            }
+
+            .information.jsx-2505244336 {
+                padding-top: 48px;
+            }
+
+            .information__date.jsx-2505244336 {
+                font-family: Bodoni Moda;
+                font-size: 1.625em;
+                -webkit-letter-spacing: 0.5px;
+                -moz-letter-spacing: 0.5px;
+                -ms-letter-spacing: 0.5px;
+                letter-spacing: 0.5px;
+            }
+
+            .information__time.jsx-2505244336 {
+                font-weight: 300;
+            }
+
+            .information__deco.jsx-2505244336 {
+                padding: 0.2em;
+            }
+
+            .deco__big.jsx-2505244336 {
+                position: relative;
+            }
+
+            .wedding.jsx-2505244336 {
+                position: absolute;
+                z-index: 10;
+                top: -93px;
+                left: 3%;
+                -webkit-transform: null;
+                -ms-transform: null;
+                transform: null;
+                width: 100%;
+            }
+
+            .preWrap.jsx-2505244336 {
+                font-weight: 300;
+            }
+
+            .photo.jsx-2505244336,.information.jsx-2505244336,.name.jsx-2505244336 {
+                opacity: 0;
+                -webkit-animation: fadeInUp-jsx-2505244336 1s;
+                animation: fadeInUp-jsx-2505244336 1s;
+                -webkit-animation-delay: 3.3s;
+                animation-delay: 3.3s;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+               @-webkit-keyframes fadeInUp-jsx-457357336 {
+                from {
+                    opacity: 0;
+                    -webkit-transform: translate3d(0,5%,0);
+                    -ms-transform: translate3d(0,5%,0);
+                    transform: translate3d(0,5%,0);
+                }
+
+                to {
+                    opacity: 1;
+                    -webkit-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    transform: translateZ(0);
+                }
+            }
+
+            @keyframes fadeInUp-jsx-457357336 {
+                from {
+                    opacity: 0;
+                    -webkit-transform: translate3d(0,5%,0);
+                    -ms-transform: translate3d(0,5%,0);
+                    transform: translate3d(0,5%,0);
+                }
+
+                to {
+                    opacity: 1;
+                    -webkit-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    transform: translateZ(0);
+                }
+            }
+        </style>
     <link
       href="images/favicon/apple-touch-icon.png"
       rel="apple-touch-icon"
@@ -112,10 +284,10 @@
       crossorigin="anonymous"
       src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"
     ></script>
-    <div style="width: 100%; max-width: 500px">
+    <div class ="jsx-457357336 container null" style="width: 100%; max-width: 500px">
       <div style="height: 100vh">
         <div
-          class="div"
+          class="jsx-457357336 container"
           style="
             width: 100%;
             display: flex;
@@ -208,10 +380,68 @@
             >
               더링크 호텔 서울 3층 베일리홀
             </div>
+            <div class="jsx-2261571922 calendar">
+              <div class="jsx-2261571922 calendar__month">5
+                <!-- -->
+                월</div>
+              <div class="jsx-2261571922 calendar__day">
+                <div class="jsx-2261571922 calendar__item">일</div>
+                <div class="jsx-2261571922 calendar__item">월</div>
+                <div class="jsx-2261571922 calendar__item">화</div>
+                <div class="jsx-2261571922 calendar__item">수</div>
+                <div class="jsx-2261571922 calendar__item">목</div>
+                <div class="jsx-2261571922 calendar__item">금</div>
+                <div class="jsx-2261571922 calendar__item">토</div>
+              </div>
+              <div class="jsx-2261571922 calendar__date">
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item">1</div>
+                <div class="jsx-2261571922 calendar__item">2</div>
+                <div class="jsx-2261571922 calendar__item">3</div>
+                <div class="jsx-2261571922 calendar__item">4</div>
+                <div class="jsx-2261571922 calendar__item">5</div>
+                <div class="jsx-2261571922 calendar__item">6</div>
+                <div class="jsx-2261571922 calendar__item">7</div>
+                <div class="jsx-2261571922 calendar__item">8</div>
+                <div class="jsx-2261571922 calendar__item">9</div>
+                <div class="jsx-2261571922 calendar__item">10</div>
+                <div class="jsx-2261571922 calendar__item">11</div>
+                <div class="jsx-2261571922 calendar__item">12</div>
+                <div class="jsx-2261571922 calendar__item">13</div>
+                <div class="jsx-2261571922 calendar__item">14</div>
+                <div class="jsx-2261571922 calendar__item">15</div>
+                <div class="jsx-2261571922 calendar__item">16</div>
+                <div class="jsx-2261571922 calendar__item">17</div>
+                <div class="jsx-2261571922 calendar__item">18</div>
+                <div class="jsx-2261571922 calendar__item">19</div>
+                <div class="jsx-2261571922 calendar__item">20</div>
+                <div class="jsx-2261571922 calendar__item">21</div>
+                <div class="jsx-2261571922 calendar__item">22</div>
+                <div class="jsx-2261571922 calendar__item">23</div>
+                <div class="jsx-2261571922 calendar__item">24</div>
+                <div class="jsx-2261571922 calendar__item event-date">25</div>
+                <div class="jsx-2261571922 calendar__item">26</div>
+                <div class="jsx-2261571922 calendar__item">27</div>
+                <div class="jsx-2261571922 calendar__item">28</div>
+                <div class="jsx-2261571922 calendar__item">29</div>
+                <div class="jsx-2261571922 calendar__item">30</div>
+                <div class="jsx-2261571922 calendar__item">31</div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+                <div class="jsx-2261571922 calendar__item"></div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- ---------------------------------------- -->
-        <div class="ww-section hyunjin-frame-1" id="couple">
+        <div class="ww-section hyunjin-frame-1 jsx-457357335 content" id="couple">
           <div class="container">
             <div
               class="row text-center"
