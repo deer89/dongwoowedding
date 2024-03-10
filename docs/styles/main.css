@@ -10642,7 +10642,7 @@ img {
 .hyunjin-frame {
   transform: translateY(50px);
   opacity: 0;
-  animation: 1800ms ease fadeUp;
+  animation: 2500ms ease fadeUp;
   animation-fill-mode: forwards;
 }
 
