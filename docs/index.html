@@ -660,6 +660,7 @@
             height: 100%;
           "
         >
+
           <div
                   style="
               margin-top: 20px;
@@ -673,6 +674,7 @@
               padding: 0px;
             "
           >
+
             예식안내
           </div>
 
@@ -730,7 +732,7 @@
               padding: 0px;
             "
           >
-            -</div>
+            </div>
             <p
                     style="
                 font-size: 2em;
@@ -750,6 +752,7 @@
                     src="./images/2pageback.jpeg"
                     alt=""
                     style="width: 100%; object-fit: cover"
+
             />
           </div>
           <div
@@ -1039,11 +1042,15 @@
       const animatedElement5 = document.querySelector(".hyunjin-frame-5")
       observer5.observe(animatedElement5)
 
+  let currentImageIndex = 0
+      const arrowRight = document.getElementById("arrow-right")
+      const arrowLeft = document.getElementById("arrow-left")
       const copyToClipboard = (text) => {
         navigator.clipboard.writeText(text).then(() => {
           alert(`계좌번호 ${text}가 복사되었습니다`)
         })
       }
+
 
       const galleries = document.getElementsByClassName("gallery")
 
