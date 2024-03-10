@@ -211,7 +211,7 @@
           </div>
         </div>
         <!-- ---------------------------------------- -->
-        <div class="ww-section" id="couple">
+        <div class="ww-section hyunjin-frame-1" id="couple">
           <div class="container">
             <div
               class="row text-center"
@@ -476,7 +476,10 @@
           </div>
         </div>
 
-        <div class="ww-section ww-rsvp-detail" style="overflow: hidden">
+        <div
+          class="ww-section ww-rsvp-detail hyunjin-frame-4"
+          style="overflow: hidden"
+        >
           <div class="container">
             <div class="col text-center">
               <h2
@@ -619,6 +622,10 @@
         })
       }
 
+      const observer1 = new IntersectionObserver(handleIntersection, options)
+      const animatedElement1 = document.querySelector(".hyunjin-frame-1")
+      observer1.observe(animatedElement1)
+
       // Create a new Intersection Observer
       const observer = new IntersectionObserver(handleIntersection, options)
       // Get the animated element
@@ -630,6 +637,11 @@
 
       const animatedElement2 = document.querySelector(".hyunjin-frame-3")
       oberserv2.observe(animatedElement2)
+
+      const oberserv4 = new IntersectionObserver(handleIntersection, options)
+
+      const animatedElement4 = document.querySelector(".hyunjin-frame-4")
+      oberserv2.observe(animatedElement4)
 
       let currentImageIndex = 0
       const arrowRight = document.getElementById("arrow-right")
