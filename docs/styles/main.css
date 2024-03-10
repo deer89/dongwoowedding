@@ -10462,7 +10462,13 @@ body {
 }
 
 @font-face {
-      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-ExtraLight.ttf");
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-Light.otf");
+      font-family: "MaruBuri-Light"
+
+}
+
+@font-face {
+      src : url("../font/maruburi/MaruBuriOTF/MaruBuri-ExtraLight.otf");
       font-family: "MaruBuri-ExtraLight"
 
 }
